@@ -1,0 +1,49 @@
+
+    Question
+    Sign in to vote
+    0
+    Sign in to vote
+    If I want to find the minimum value in a list of numbers i.e.
+
+    List<Double> someList = new List<Double>();.
+	0
+
+    can I use
+
+    Double lowestValue = someList.Min();
+
+    or do i have to use someList.Sort() and use the someList[0] ?
+    Tuesday, January 12, 2010 9:53 PM
+    Avatar of b1uceree
+    b1uceree
+    15 Points
+
+Answers
+
+    Question
+    Sign in to vote
+    0
+    Sign in to vote
+    If you're using .NET 3.5 or 4.0, make sure you have:
+
+    using System.Linq;
+
+    At the top of your file.
+
+    If you do that, you can use
+
+    double lowestValue = someList.Min();
+
+    This works because LINQ adds the Enumerable.Min extension method, which will work directly on an IEnumerable<double>.  List<double> is an IEnumerable<double> so this extension method will work.
+
+
+
+ // create a method named GradeTestScores that takes a int array of test scores as its parameter and returns a string
+            // GradeTestScores will add up these test scores and calculate an average score. 
+            // It should then return a string of "pass" or "fail" depending on these two conditions:
+            // If the average score is greater than or equal to 70 and no single test score is below 50, then return a message of "pass".
+             //{ 60, 50, 89, 72, 79, 54, 97 };
+
+
+			 // If the average score is lower than 70 or at least one test score is below 50, then return a message of "fail".
+      
