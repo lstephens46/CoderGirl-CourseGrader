@@ -31,8 +31,8 @@ namespace CourseGrader
             {
                 if (average >= 70 && testScores[i] <= 50)
                 {
-                    passFail = "fail";
-
+                    passFail = "pass";
+                    continue;
                 }
                 else if (average >= 70 && testScores[i] >= 50)
                 { 

@@ -33,7 +33,7 @@ namespace Test
 
             string actual = Program.GradeTestScores(testCase);
 
-            Assert.Equal("fail", actual);
+            Assert.Equal("pass", actual);
         }
 
         [Fact]
